@@ -1,0 +1,56 @@
+// Palette
+
+$base_color: #EDF5FF;
+$accent_color: #E91072;
+$light-green_color: #DAFFA6;
+$light-coral_color: #D7807C;
+$dark-blue_color: #010018;
+
+// Spaces
+
+$inline_space: 8px;
+$inarticle_space: 12px;
+$insection_space: 28px;
+$between-section_space: 80px;
+
+// Border
+
+$light-width_border: 2px;
+$strong-width_border: 4px;
+$radius: 8px;
+
+// Text sizes
+
+$main-heading_size: 52px;
+$heading_size: 32px;
+$global-text_size: 16px;
+$intable-text_size: 12px;
+
+// Text fonts 
+
+$mak: 'Mak', serif;
+$raleway: 'Raleway', sans-serif;
+
+// Transparency
+
+$low_trans: B8;
+$middle_trans: A3;
+$high_trans: 7A;
+
+// Transition
+
+$fast_anim: all 0.2s;
+$slow_anim: all 0.4s;
+
+// Content container
+
+$content-container_max-width: 1280px;
+$content-container_margin: $insection_space;
+
+@mixin category-size ($screen_size) {
+    @if 1280 > $screen_size {
+        grid-template: repeat(2, calc(1280px / 3)) / repeat(2, calc(1280px / 3));
+    } @else {
+        grid-template: repeat(2, calc((100vw - $insection_space * 2) / 3)) / repeat(2, calc((100vw - $insection_space * 2) / 3));
+    }
+}
