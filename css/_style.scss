@@ -131,7 +131,7 @@ header.global {
             }
     
             > .logotype {
-                height: 40px;
+                height: $logotype_height;
             }
     
             > .user-tools {
@@ -185,7 +185,7 @@ header.global {
         transition: $slow_anim;
 
         &.active {
-            top: $insection_space * 2 + 40px;
+            top: $insection_space * 2 + $logotype_height;
         }
 
         .main-menu_inner {
@@ -225,6 +225,7 @@ footer {
             h3 {
                 margin-bottom: $insection_space;
                 font-size: $heading_size;
+                font-size: $global-text_size;
                 font-weight: 700;
             }
 
@@ -288,7 +289,129 @@ footer {
 // Cart window
 
 .cart_area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 140;
     display: none;
+    @include popup-space(100vw);
+    grid-template-areas: 'first_db first_db first_db'
+                        'second_db cart_w fourth_db'
+                        'last_db last_db last_db';
+    width: 100vw;
+    height: 100vh;
+    background-color: #{$dark-blue_color} + #{$low_trans};
+
+    &.active {
+        display: grid;
+    }
+
+    .dark-back {
+        &:first-child {
+           grid-area: first_db; 
+        }
+        
+        &:nth-child(2) {
+            grid-area: second_db; 
+        }
+    
+        &:nth-child(4) {
+            grid-area: fourth_db; 
+        }
+
+        &:last-child {
+            grid-area: last_db; 
+        }
+    }
+
+    .cart_window {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        grid-area: cart_w;
+        border-radius: $radius;
+        background-color: $base_color;
+        overflow: hidden;
+
+        > .shopping-cart {
+            flex: 3;
+            padding: 4vw;
+
+            h3 {
+                font-size: $heading_size;
+                font-family: $mak;
+            }
+        }
+
+        > .order-reg {
+            flex: 2;
+            padding: 4vw;
+            border-radius: $radius;
+            background-color: $light-green_color;
+
+            > h3 {
+                font-size: $heading_size;
+                font-weight: 700;
+            }
+
+            h4 {
+                margin-bottom: $inline_space;
+                font-weight: 700;
+            }
+
+            > .preliminary-sum {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin: $insection_space 0;
+                font-weight: 700;
+            }
+
+            > form {
+                > div {
+                    margin: $inarticle_space 0;
+                }
+
+                .radio_block > label {
+                    display: flex;
+                    gap: $inline_space;
+                    margin: $inline_space 0;
+                }
+
+                > .total-amount {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    margin: $insection_space 0;
+                    padding: $inline_space;
+                    border-top: $light-width_border solid $light-coral_color;
+                    border-radius: $radius;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        > .cross-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+
+            path {
+                fill: #{$dark-blue_color} + #{$middle_trans};
+            }
+
+            &:hover{
+                cursor: pointer;
+
+                path {
+                    fill: $dark-blue_color;
+                }
+            }
+        }
+    }
 }
 
 // Ask-call window

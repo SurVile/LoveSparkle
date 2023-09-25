@@ -1,5 +1,14 @@
+// Hide select -------------------------------------------------------
+
+$('.option-list')
+    .hide()
+    .slideUp()
+    .css({
+        'visibility': 'visible'
+    });
+
 $(document).ready(function() {
-    // Open menu list
+    // Open menu list -------------------------------------------------------
 
     $('.catalog_button').mouseenter(function() {
         $(this).children('.arrow').addClass('active');
@@ -17,15 +26,51 @@ $(document).ready(function() {
         });
     });
 
-    // Open service description
+    // Select working -------------------------------------------------------
 
-    $('.service-line > h3').click(function() {
-        if ($(this).children('.plus').hasClass('active')) {
-            $(this).children('.plus').removeClass('active');
-            $(this).parents('.service-point').removeClass('active');
+    $('.select-clon').click(function() {
+        let option_list_obj = $(this).children('.option-list')
+            select_orig_obj = $(this).prev();
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            option_list_obj
+                .removeClass('active')
+                .slideUp(400);
         } else {
-            $(this).children('.plus').addClass('active');
-            $(this).parents('.service-point').addClass('active');
+            $(this).addClass('active');
+            option_list_obj
+                .addClass('active')
+                .slideDown(400);
         }
+    
+        $(this).find('.option-clon').click(function() {
+            let option_id = $(this).attr('id'),
+                option_val = $(this).text();
+
+            $(this).parents('.select-clon').find('.select-inner').text(option_val);
+        
+            select_orig_obj.find('option[value="' + option_id.split('Val', 1) + '"]').prop('selected', true);
+        });
+    });
+
+    // Open item page -------------------------------------------------------
+
+    $('.item-card').click(function() {
+        window.location.href = 'item-page.html';
+    });
+
+    // Cart-window working
+
+    $('.cart_icon').click(function() {
+        $('.cart_area').addClass('active');
+
+        $('.cart_area.active .cross-icon').click(function() {
+            $('.cart_area').removeClass('active');
+        });
+    
+        $('.cart_area.active > .dark-back').click(function() {
+            $('.cart_area').removeClass('active');
+        });
     });
 });

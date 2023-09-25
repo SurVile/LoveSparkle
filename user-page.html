@@ -8,8 +8,9 @@
     <meta name="author" content="Love Sparkle">
     <meta name="copyright" content="ООО &laquo;Лав Спаркл&raquo;">
     <meta name="address" content="Где-то там, Далеко, 48">
-    <title>LoveSparkle &mdash; магазин модных demi-fine украшений в Москве</title>
+    <title>Личный кабинет в магазине модных demi-fine украшений в Москве &mdash; LoveSparkle</title>
     <link rel="shortcut icon" href="img/icon_small.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
                     <!-- Header content ______________________________________ -->
                     <div class="header-global_inner">
                         <!-- Catalog button ______________________________________ -->
-                        <a class="catalog_button" href="catalog.html">
+                        <a class="catalog_button" href="#">
                             <span class="text">Каталог</span>
                             <span class="arrow img_container">
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
@@ -86,306 +87,52 @@
             <nav class="main-menu">
                 <div class="_container">
                     <ul class="main-menu_inner">
-                        <li><a href="catalog.html">Кольца</a></li>
-                        <li><a href="catalog.html">Браслеты</a></li>
-                        <li><a href="catalog.html">Ожерелья</a></li>
-                        <li><a href="catalog.html">Серьги</a></li>
+                        <li><a href="#">Кольца</a></li>
+                        <li><a href="#">Браслеты</a></li>
+                        <li><a href="#">Ожерелья</a></li>
+                        <li><a href="#">Серьги</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <!-- Main content ______________________________________ -->
         <main>
-            <!-- Front page section ______________________________________ -->
-            <section class="front-page">
-                <!-- Content container ______________________________________ -->
-                <div class="_container">
-                    <!-- Inner container ______________________________________ -->
-                    <div class="front-page_inner">
-                        <article>
-                            <h1>Раскройте свое сияние</h1>
-                            <p>Успейте порадовать себя новой коллекцией </p>
-                            <button>подробнее</button>
-                        </article>
+            <!-- User profile ______________________________________ -->
+            <aside class="profile">
+                <header>
+                    <div class="avatar img_container">
+                        <img src="img/загрузка1.jpeg" alt="">
                     </div>
+                    <h3>Полное Имя Пользователя</h3>
+                </header>
+                <div class="profile-inf">
+                    <div class="login-line">
+                        <h4>Логин: </h4>
+                        <p>userlogin1</p>
+                    </div>
+                    <div class="login-line">
+                        <h4>Почта: </h4>
+                        <p>uname1@mail.ru</p>
+                    </div>
+                    <div class="login-line">
+                        <h4>Телефон: </h4>
+                        <p>+7 (910) 100-10-10</p>
+                    </div>
+                    <button name="sign_out">Выйти</button>
                 </div>
-            </section>
-            <!-- New items section ______________________________________ -->
-            <section class="new-items">
-                <!-- Content container ______________________________________ -->
-                <div class="_container">
-                    <!-- Inner container ______________________________________ -->
-                    <div class="new-items_inner">
-                        <h2>Новинки</h2>
-                        <!-- Items cards container ______________________________________ -->
-                        <div class="cards_container">
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                        </div>
-                    </div>
+                <div class="edit-profile-icon img_container">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 492.493 492" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path d="M304.14 82.473 33.165 353.469a10.799 10.799 0 0 0-2.816 4.949L.313 478.973a10.716 10.716 0 0 0 2.816 10.136 10.675 10.675 0 0 0 7.527 3.114 10.6 10.6 0 0 0 2.582-.32l120.555-30.04a10.655 10.655 0 0 0 4.95-2.812l271-270.977zM476.875 45.523 446.711 15.36c-20.16-20.16-55.297-20.14-75.434 0l-36.949 36.95 105.598 105.597 36.949-36.949c10.07-10.066 15.617-23.465 15.617-37.715s-5.547-27.648-15.617-37.719zm0 0" fill="#000000" data-original="#000000" class=""></path>
+                        </g>
+                    </svg>
                 </div>
-            </section>
-            <!-- Categories section ______________________________________ -->
-            <section class="categories">
-                <!-- Content container ______________________________________ -->
-                <div class="_container">
-                    <!-- Inner container ______________________________________ -->
-                    <div class="categories_inner">
-                        <aside class="catalog_button">
-                            <h3>Выберите украшения<br>по своему вкусу</h3>
-                            <button name="get_to_catalog">в каталог</button>
-                        </aside>
-                        <div class="categories_container">
-                            <article>
-                                <h2>Кольца</h2>
-                                <div class="img_container">
-                                    <img src="img/Sustainable Finds! 🌿.jpeg" alt="">
-                                </div>
-                                <div class="dark-side"></div>
-                            </article>
-                            <article>
-                                <h2>Браслеты</h2>
-                                <div class="img_container">
-                                    <img src="img/Fashion Week_ Fashion Shows, Trends, Runway Reviews -- The Cut.jpeg" alt="">
-                                </div>
-                                <div class="dark-side"></div>
-                            </article>
-                            <article>
-                                <h2>Ожерелья</h2>
-                                <div class="img_container">
-                                    <img src="img/Vanda Jacintho Jewelry - Honestly WTF.jpeg" alt="">
-                                </div>
-                                <div class="dark-side"></div>
-                            </article>
-                            <article>
-                                <h2>Серьги</h2>
-                                <div class="img_container">
-                                    <img src="img/загрузка.jpeg" alt="">
-                                </div>
-                                <div class="dark-side"></div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Bestsellers section ______________________________________ -->
-            <section class="bestsellers">
-                <!-- Content container ______________________________________ -->
-                <div class="_container">
-                    <!-- Inner container ______________________________________ -->
-                    <div class="bestsellers_inner">
-                        <h2>Хиты продаж</h2>
-                        <!-- Items cards container ______________________________________ -->
-                        <div class="cards_container">
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                            <!-- Item card ______________________________________ -->
-                            <article class="item-card">
-                                <div class="img_container">
-                                    <img src="img/items/rings/a lone clown in the middle of the woods.jpeg" alt="">
-                                </div>
-                                <div class="item-descrip">
-                                    <h3>Кольцо из натуралльного камня</h3>
-                                    <p class="const"><span class="cost-val">12 340</span> р.</p>
-                                    <button name="get_to_cart">купить</button>
-                                </div>
-                                <div class="light-back"></div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Services section ______________________________________ -->
-            <section class="add-services">
-                <!-- Content container ______________________________________ -->
-                <div class="_container">
-                    <!-- Inner container ______________________________________ -->
-                    <div class="add-services_inner">
-                        <h2>Дополнительные услуги</h2>
-                        <!-- Points container ______________________________________ -->
-                        <div class="points_container">
-                            <!-- Point line ______________________________________ -->
-                            <article class="service-point">
-                                <div class="service-line">
-                                    <h3>
-                                        <span class="plus img_container">
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                                <g>
-                                                    <path d="M492 236H276V20c0-11.046-8.954-20-20-20s-20 8.954-20 20v216H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h216v216c0 11.046 8.954 20 20 20s20-8.954 20-20V276h216c11.046 0 20-8.954 20-20s-8.954-20-20-20z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="service-name">Заказать украшение</span>
-                                    </h3>
-                                    <div class="service-descrip_button img_container">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                            <g>
-                                                <path d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="service-descrip">
-                                    <p>Отправьте фото, рисунок или опишите идею, а наша команда создаст украшение Вашей мечты. Вручную, с любовью.</p>
-                                </div>
-                            </article>
-                            <!-- Point line ______________________________________ -->
-                            <article class="service-point">
-                                <div class="service-line">
-                                    <h3>
-                                        <span class="plus img_container">
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                                <g>
-                                                    <path d="M492 236H276V20c0-11.046-8.954-20-20-20s-20 8.954-20 20v216H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h216v216c0 11.046 8.954 20 20 20s20-8.954 20-20V276h216c11.046 0 20-8.954 20-20s-8.954-20-20-20z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="service-name">Подарочные сертификаты</span>
-                                    </h3>
-                                    <div class="service-descrip_button img_container">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                            <g>
-                                                <path d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="service-descrip">
-                                    <p>Отправьте фото, рисунок или опишите идею, а наша команда создаст украшение Вашей мечты. Вручную, с любовью.</p>
-                                </div>
-                            </article>
-                            <!-- Point line ______________________________________ -->
-                            <article class="service-point">
-                                <div class="service-line">
-                                    <h3>
-                                        <span class="plus img_container">
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                                <g>
-                                                    <path d="M492 236H276V20c0-11.046-8.954-20-20-20s-20 8.954-20 20v216H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h216v216c0 11.046 8.954 20 20 20s20-8.954 20-20V276h216c11.046 0 20-8.954 20-20s-8.954-20-20-20z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="service-name">Ремонт и проверка качества</span>
-                                    </h3>
-                                    <div class="service-descrip_button img_container">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                            <g>
-                                                <path d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="service-descrip">
-                                    <p>Отправьте фото, рисунок или опишите идею, а наша команда создаст украшение Вашей мечты. Вручную, с любовью.</p>
-                                </div>
-                            </article>
-                            <!-- Point line ______________________________________ -->
-                            <article class="service-point">
-                                <div class="service-line">
-                                    <h3>
-                                        <span class="plus img_container">
-                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                                <g>
-                                                    <path d="M492 236H276V20c0-11.046-8.954-20-20-20s-20 8.954-20 20v216H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h216v216c0 11.046 8.954 20 20 20s20-8.954 20-20V276h216c11.046 0 20-8.954 20-20s-8.954-20-20-20z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <span class="service-name">Гравировка украшений</span>
-                                    </h3>
-                                    <div class="service-descrip_button img_container">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                                            <g>
-                                                <path d="M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z" fill="#010018" data-original="#000000" opacity="1" class=""></path>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="service-descrip">
-                                    <p>Отправьте фото, рисунок или опишите идею, а наша команда создаст украшение Вашей мечты. Вручную, с любовью.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
+            </aside>
+            <!-- Orders ______________________________________ -->
+            <section class="orders">
+                <h1>Заказы</h1>
+                <div class="orders_container">
+                    <!-- Order card -->
                 </div>
             </section>
         </main>
@@ -536,7 +283,7 @@
                             <input type="text" name="del_address" id="delAddress">
                         </div>
                         <div class="promo-code">
-                            <h4><label for="promoCode">Промокод</label></h4>
+                            <h4><label for="promoCode">Адрес доставки</label></h4>
                             <input type="text" name="promo_code" id="promoCode">
                         </div>
                         <div class="payment-method">
@@ -545,12 +292,10 @@
                                 <label>
                                     <input type="radio" name="payment_method" value="card">
                                     <span class="radio-clon"></span>
-                                    <span>Картой при получении</span>
                                 </label>
                                 <label>
                                     <input type="radio" name="payment_method" value="cash">
                                     <span class="radio-clon"></span>
-                                    <span>Наличными при получении</span>
                                 </label>
                             </div>
                         </div>
@@ -612,6 +357,5 @@
     <!-- Scripts ______________________________________ -->
     <script src="js/jquery.3.7.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>

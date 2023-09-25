@@ -1,59 +1,5 @@
 @import 'style';
 
-.cards_container {
-    display: flex;
-    justify-content: space-between;
-    gap: $insection_space;
-
-    > .item-card {
-        position: relative;
-        border-bottom: $strong-width_border solid $light-green_color;
-        border-radius: $radius;
-        background-color: $light-green_color;
-
-        > .img_container {
-            position: relative;
-            z-index: 10;
-            border-radius: $radius;
-            overflow: hidden;
-        }
-
-        > .item-descrip {
-            position: relative;
-            z-index: 10;
-            padding: $insection_space;
-
-            > h3 {
-                font-family: $mak;
-            }
-
-            > p {
-                margin: $inarticle_space 0;
-            }
-        }
-
-        > .light-back {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: $radius;
-            background-color: $base_color;
-            transition: $slow_anim;
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            > .light-back {
-                height: 0;
-            }
-        }
-    }
-}
-
 // Front page section
 
 .front-page {
@@ -81,6 +27,14 @@
 .new-items {
     width: 100vw;
     text-align: center;
+}
+
+.cards_container {
+    display: flex;
+    justify-content: space-between;
+    gap: $insection_space;
+
+    @import 'item-card';
 }
 
 // Categories section
@@ -193,7 +147,7 @@
                 border-bottom: $strong-width_border solid $light-green_color;
                 border-radius: $radius;
                 overflow: hidden;
-                transition: $slow_anim;
+                transition: height 0.4s;
 
                 &.active {
                     height: auto;

@@ -42,15 +42,35 @@ $high_trans: 7A;
 $fast_anim: all 0.2s;
 $slow_anim: all 0.4s;
 
+// Global header
+
+$logotype_height: 40px;
+
 // Content container
 
 $content-container_max-width: 1280px;
 $content-container_margin: $insection_space;
 
 @mixin category-size ($screen_size) {
-    @if 1280 > $screen_size {
+    @if 1336 > $screen_size {
         grid-template: repeat(2, calc(1280px / 3)) / repeat(2, calc(1280px / 3));
     } @else {
         grid-template: repeat(2, calc((100vw - $insection_space * 2) / 3)) / repeat(2, calc((100vw - $insection_space * 2) / 3));
+    }
+}
+
+@mixin item-size ($screen_size) {
+    @if 1336 > $screen_size {
+        height: (1280px - $insection_space * 3) / 4;
+    } @else {
+        height: (100vw - $insection_space * 2 - $insection_space * 3) / 4;
+    }
+}
+
+@mixin popup-space($screen_size) {
+    @if 1336 > $screen_size {
+        grid-template: 1fr auto 1fr / calc((100vw - 1280px) / 2) auto calc((100vw - 1280px) / 2);
+    } @else {
+        grid-template: 1fr auto 1fr / 28px auto 28px;
     }
 }
