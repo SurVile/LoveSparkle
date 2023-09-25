@@ -1,0 +1,230 @@
+@import 'style';
+
+// Front page section
+
+.front-page {
+    width: 100vw;
+    height: 100vh;
+    background: url('../img/DIY\ TRENDY\ CLAY\ RINGS\ -\ FAÇA\ VOCÊ\ MESMO\ ANÉIS\ DE\ BISCUIT\ -\ FAÇA\ E\ VENDA\ E\ GANHE\ RENDA\ EXTRA_2.png') no-repeat bottom right / auto 100%,
+                url('../img/front-page_background.jpg') no-repeat center / cover;
+
+    .front-page_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        > article {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $inarticle_space;
+        }
+    }
+}
+
+// New items section
+
+.new-items {
+    width: 100vw;
+    text-align: center;
+}
+
+.cards_container {
+    display: flex;
+    justify-content: space-between;
+    gap: $insection_space;
+
+    @import 'item-card';
+}
+
+// Categories section
+
+.categories {
+    width: 100vw;
+    background: linear-gradient(90deg, #{$light-green_color} + #{$middle_trans} 0%, #{$light-green_color} + #{$middle_trans} 100%),
+                url('../img/Hc51031ff7dee40b2802b53f6df8950b03_bw.jpg') no-repeat center / cover;
+
+    .categories_inner {
+        display: flex;
+        justify-content: center;
+
+        .catalog_button {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: $inarticle_space;
+            
+            h3 {
+                font-size: $heading_size;
+                font-weight: 700;
+            }
+        }
+
+        .categories_container {
+            flex: 2;
+            display: grid;
+            @include category-size(100vw);
+
+            article {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $base_color;
+                font-family: $mak;
+
+                > h2 {
+                    position: relative;
+                    z-index: 30;
+                    font-weight: 300;
+                    transition: $slow_anim;
+                }
+
+                > .img_container, .dark-side {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    width: 100%;
+                    height: 100%;
+                    transition: $slow_anim;
+                }
+
+                > .dark-side {
+                    background-color: #{$dark-blue_color} + #{$high_trans};
+                    backdrop-filter: blur(0);
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    h2 {
+                        font-size: $main-heading_size;
+                    }
+
+                    > .img_container > img {
+                        transform: scale(2);
+                    }
+
+                    > .dark-side {
+                        background-color: #{$dark-blue_color} + #{$low_trans};
+                        backdrop-filter: blur(12px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Bestsellers section 
+
+.bestsellers {
+    width: 100vw;
+    text-align: center;
+}
+
+// Add-services section
+
+.add-services {
+    width: 100vw;
+
+    .add-services_inner {
+        text-align: center;
+
+        > .points_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: $inarticle_space;
+
+            > .service-point {
+                position: relative;
+                width: 480px;
+                height: $insection_space * 2 + 32px;
+                border-bottom: $strong-width_border solid $light-green_color;
+                border-radius: $radius;
+                overflow: hidden;
+                transition: height 0.4s;
+
+                &.active {
+                    height: auto;
+                }
+
+                > .service-line {
+                    position: relative;
+                    z-index: 20;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: $insection_space;
+                    border-radius: $radius;
+                    background-color: $light-green_color;
+
+                    .img_container {
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: $radius;
+                    }
+
+                    h3 {
+                        display: flex;
+                        align-items: center;
+                        gap: $inarticle_space;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        > .plus {
+                            transition: $fast_anim;
+
+                            &.active {
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+
+                    .service-descrip_button {
+                        width: 32px;
+                        height: 32px;
+                        padding: 4px;
+                        border: $light-width_border solid $accent_color;
+                        border-radius: $radius;
+                        background-color: $accent_color;
+
+                        svg {
+                            transform: rotate(-90deg);
+                        }
+
+                        path {
+                            fill: $base_color;
+                        }
+
+                        &:hover {
+                            border-color: $light-coral_color;
+                            cursor: pointer;
+                        }
+
+                        &:active {
+                            background-color: $light-coral_color;
+                        }
+                    }
+                }
+
+                .service-descrip {
+                    position: relative;
+                    left: 0;
+                    z-index: 10;
+                    padding: $insection_space;
+                    // border-bottom: $strong-width_border solid $light-green_color;
+                    border-radius: $radius;
+                    background-color: $base_color;
+                }
+            }
+        }
+    }
+}

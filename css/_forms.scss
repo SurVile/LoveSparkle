@@ -1,0 +1,154 @@
+// Input text
+
+input:not([type='radio'], [type='checkbox'], [type='button']), .select-place {
+    width: 280px;
+    padding: $inline_space $inline_space * 2;
+    border: 0 solid $base_color;
+    border-top-width: $light-width_border;
+    border-bottom-width: $light-width_border;
+    border-bottom-color: $light-coral_color;
+    border-radius: $radius; 
+    font-family: inherit;
+    color: inherit;
+    background-color: $base_color;
+    outline: none;
+    transition: $fast_anim;
+
+    &:hover, &:focus {
+        border-color: $light-coral_color;
+        border-width: $light-width_border;
+    }
+}
+
+// Buttons
+
+.contacts {
+    button {
+        border-color: $light-green_color;
+        background-color: $light-green_color;
+        color: $dark-blue_color;
+    }
+}
+
+input[type='button'], input[type='reset'], button {
+    padding: $global-text_size $global-text_size * 2;
+    border-radius: $radius;
+    font-size: $global-text_size;
+    font-weight: 700;
+
+    &:hover {
+        border-color: $light-coral_color;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $light-coral_color;
+        color: $base_color;
+    }
+}
+
+input[type='button'], button {
+    border: $light-width_border solid $accent_color;
+    color: $base_color;
+    background-color: $accent_color;
+}
+
+input[type='reset'] {
+    border: $light-width_border solid $light-green_color;
+    color: $dark-blue_color;
+    background-color: $light-green_color;
+}
+
+// Radio
+
+input[type='radio'] {
+    display: none;
+}
+
+.radio-clon {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 0 solid $base_color;
+    border-top-width: $light-width_border;
+    border-bottom-width: $light-width_border;
+    border-bottom-color: $light-coral_color;
+    border-radius: 12px;
+    background-color: $base_color;
+    transition: $fast_anim;
+
+    &:hover {
+        border-color: $light-coral_color;
+        cursor: pointer;
+    }
+
+    &::before {
+        position: absolute;
+        top: 4.8px;
+        left: 6px;
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-color: $light-coral_color;
+        opacity: 0;
+
+        input[type='radio']:checked + & {
+            opacity: 1;
+        }
+    }
+}
+
+// Select
+
+select[name='items_categories'] {
+    display: none;
+}
+
+.select-clon {
+    position: relative;
+
+    .select-place {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        > .img_container {
+            width: 20px;
+            height: 20px;
+            transition: $slow_anim;
+        }
+    }
+
+    &.active .img_container {
+        transform: rotate(-180deg);
+    }
+}
+
+.option-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 280px;
+    padding-top: ($light-width_border + $inline_space) * 3 + $global-text_size;
+    border-bottom: $light-width_border solid $light-coral_color;
+    border-radius: $radius;
+    background-color: $base_color;
+    visibility: hidden;
+    transition: $fast_anim;
+}
+
+.option-clon {
+    padding: $inline_space $inline_space * 2;
+    border-radius: $radius;
+    transition: $fast_anim;
+
+    &:hover {
+        background-color: #{$light-coral_color} + #{$middle_trans};
+    }
+}
